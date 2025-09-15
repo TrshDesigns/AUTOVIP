@@ -36,6 +36,12 @@
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="exampleModalLabel">Contacto</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
             <div class="modal-body position-relative">
               <form class="">
@@ -56,15 +62,13 @@
                   </div>
                 </div>
                 <div class="mb-3">
-                  <label for="passwordInput" class="form-label"
-                    >Contraseña</label
-                  >
+                  <label for="emailInput" class="form-label">Correo</label>
                   <input
-                    type="password"
-                    placeholder="Inserta tu contraseña"
+                    type="email"
+                    placeholder="Inserta tu email"
                     required="true"
                     class="form-control"
-                    id="passwordInput"
+                    id="email"
                   />
                 </div>
                 <div class="mb-3">
@@ -133,244 +137,387 @@
         </div>
       </nav>
       <!--Continuar aquí-->
-      <div class="container">
-        <div class="row">
-          <div class="row my-5">
-            <div class="col-6"><h2>Ventas</h2></div>
-            <div class="col-6 text-end">
-              <h6>
-                <svg
-                  class="m-1"
-                  fill="#000000"
-                  width="20px"
-                  height="20px"
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0 168v-16c0-13.255 10.745-24 24-24h360V80c0-21.367 25.899-32.042 40.971-16.971l80 80c9.372 9.373 9.372 24.569 0 33.941l-80 80C409.956 271.982 384 261.456 384 240v-48H24c-13.255 0-24-10.745-24-24zm488 152H128v-48c0-21.314-25.862-32.08-40.971-16.971l-80 80c-9.372 9.373-9.372 24.569 0 33.941l80 80C102.057 463.997 128 453.437 128 432v-48h360c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24z"
-                  />
-                </svg>
-
-                | UYU/USD: 40
-              </h6>
-            </div>
-            <!-- Modal -->
-            <hr class="my-1" />
-            <div
-              class="modal fade"
-              id="exampleModal"
-              tabindex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
+      <div class="row my-5">
+        <div class="col-6"><h2>Ventas</h2></div>
+        <div class="col-6 text-end">
+          <h6>
+            <svg
+              class="m-1"
+              fill="#000000"
+              width="20px"
+              height="20px"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <form class="p-3 bg-light w-100">
-                      <h4>Filtro</h4>
-                      <hr />
-                      <label for="año"><strong>Año</strong></label>
-                      <select
-                        class="form-select my-2"
-                        aria-label="Selecciona el año"
-                      >
-                        <option selected>Seleccionar</option>
-                        <option value="1">1970</option>
-                        <option value="2">1960</option>
-                        <option value="3">2003</option>
-                      </select>
-                      <label for="año"><strong>Marca</strong></label>
-                      <select
-                        class="form-select my-2"
-                        aria-label="Selecciona la marca"
-                      >
-                        <option selected>Seleccionar</option>
-                        <option value="1">Peugeot</option>
-                        <option value="2">Fiat</option>
-                        <option value="3">Volvo</option>
-                      </select>
-                      <label for="año"><strong>Modelo</strong></label>
-                      <select
-                        class="form-select my-2"
-                        aria-label="Selecciona el modelo"
-                      >
-                        <option selected>Seleccionar</option>
-                        <option value="1">Sedan</option>
-                        <option value="2">SUV</option>
-                        <option value="3">Deporitvo</option>
-                      </select>
-                      <label for="año"><strong>Estado</strong></label>
-                      <select
-                        class="form-select my-2"
-                        aria-label="Selecciona el estado"
-                      >
-                        <option selected>Seleccionar</option>
-                        <option value="1">1970</option>
-                        <option value="2">1973</option>
-                        <option value="3">2003</option>
-                      </select>
-                      <button
-                        type="button"
-                        class="btn btn-warning my-1 w-100 text-white"
-                      >
-                        <strong>Filtrar</strong>
-                        <svg
-                          width="20px"
-                          height="20px"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10 17C13.866 17 17 13.866 17 10C17 6.13401 13.866 3 10 3C6.13401 3 3 6.13401 3 10C3 13.866 6.13401 17 10 17Z"
-                            stroke="#ffffff"
-                            stroke-width="3"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M20.9992 21L14.9492 14.95"
-                            stroke="#ffffff"
-                            stroke-width="3"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </button>
-                      <div class="d-grid gap-2">
-                        <button
-                          type="button"
-                          class="btn btn-outline-secondary my-3"
-                        >
-                          <strong>$ Cambiar Moneda</strong>
-                        </button>
-                      </div>
-                    </form>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">...</div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
+              <path
+                d="M0 168v-16c0-13.255 10.745-24 24-24h360V80c0-21.367 25.899-32.042 40.971-16.971l80 80c9.372 9.373 9.372 24.569 0 33.941l-80 80C409.956 271.982 384 261.456 384 240v-48H24c-13.255 0-24-10.745-24-24zm488 152H128v-48c0-21.314-25.862-32.08-40.971-16.971l-80 80c-9.372 9.373-9.372 24.569 0 33.941l80 80C102.057 463.997 128 453.437 128 432v-48h360c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24z"
+              />
+            </svg>
+
+            | UYU/USD: 40
+          </h6>
+        </div>
+        <!-- Modal filtro -->
+        <hr class="my-1" />
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4>Filtro</h4>
+
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form class="p-3 bg-light w-100">
+                  <hr />
+                  <label for="año"><strong>Año</strong></label>
+                  <select
+                    class="form-select my-2"
+                    aria-label="Selecciona el año"
+                  >
+                    <option selected>Seleccionar</option>
+                    <option value="1">1970</option>
+                    <option value="2">1960</option>
+                    <option value="3">2003</option>
+                  </select>
+                  <label for="año"><strong>Marca</strong></label>
+                  <select
+                    class="form-select my-2"
+                    aria-label="Selecciona la marca"
+                  >
+                    <option selected>Seleccionar</option>
+                    <option value="1">Peugeot</option>
+                    <option value="2">Fiat</option>
+                    <option value="3">Volvo</option>
+                  </select>
+                  <label for="año"><strong>Modelo</strong></label>
+                  <select
+                    class="form-select my-2"
+                    aria-label="Selecciona el modelo"
+                  >
+                    <option selected>Seleccionar</option>
+                    <option value="1">Sedan</option>
+                    <option value="2">SUV</option>
+                    <option value="3">Deporitvo</option>
+                  </select>
+                  <label for="año"><strong>Estado</strong></label>
+                  <select
+                    class="form-select my-2"
+                    aria-label="Selecciona el estado"
+                  >
+                    <option selected>Seleccionar</option>
+                    <option value="1">1970</option>
+                    <option value="2">1973</option>
+                    <option value="3">2003</option>
+                  </select>
+                  <button
+                    type="button"
+                    class="btn btn-warning my-1 w-100 text-white"
+                  >
+                    <strong>Filtrar</strong>
+                    <svg
+                      width="20px"
+                      height="20px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      Close
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                      Save changes
+                      <path
+                        d="M10 17C13.866 17 17 13.866 17 10C17 6.13401 13.866 3 10 3C6.13401 3 3 6.13401 3 10C3 13.866 6.13401 17 10 17Z"
+                        stroke="#ffffff"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M20.9992 21L14.9492 14.95"
+                        stroke="#ffffff"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <div class="d-grid gap-2">
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary my-3"
+                    >
+                      <strong>$ Cambiar Moneda</strong>
                     </button>
                   </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-sm-3 my-4">
+          <!-- Button trigger modal -->
+          <div class="d-grid gap-2">
+            <button
+              class="d-md-none btn btn-primary"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Filtrar
+            </button>
+          </div>
+          <form class="p-3 bg-light d-none d-md-block">
+            <h4>Filtro</h4>
+            <hr />
+            <label for="año"><strong>Año</strong></label>
+            <select
+              id="año"
+              class="form-select my-2"
+              aria-label="Selecciona el año"
+            >
+              <option selected>Seleccionar</option>
+              <option value="1">1970</option>
+              <option value="2">1960</option>
+              <option value="3">2003</option>
+            </select>
+            <label for="marc"><strong>Marca</strong></label>
+            <select
+              id="marca"
+              class="form-select my-2"
+              aria-label="Selecciona la marca"
+            >
+              <option selected>Seleccionar</option>
+              <option value="1">Peugeot</option>
+              <option value="2">Fiat</option>
+              <option value="3">Volvo</option>
+            </select>
+            <label for="modelo"><strong>Modelo</strong></label>
+            <select
+              id="modelo"
+              class="form-select my-2"
+              aria-label="Selecciona el modelo"
+            >
+              <option selected>Seleccionar</option>
+              <option value="1">Sedan</option>
+              <option value="2">SUV</option>
+              <option value="3">Deporitvo</option>
+            </select>
+            <label for="estado"><strong>Estado</strong></label>
+            <select
+              class="form-select my-2"
+              aria-label="Selecciona el estado"
+              id="estado"
+            >
+              <option selected>Seleccionar</option>
+              <option value="1">1970</option>
+              <option value="2">1973</option>
+              <option value="3">2003</option>
+            </select>
+            <button type="button" class="btn btn-warning my-1 w-100 text-white">
+              <strong>Filtrar</strong>
+              <svg
+                width="20px"
+                height="20px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 17C13.866 17 17 13.866 17 10C17 6.13401 13.866 3 10 3C6.13401 3 3 6.13401 3 10C3 13.866 6.13401 17 10 17Z"
+                  stroke="#ffffff"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M20.9992 21L14.9492 14.95"
+                  stroke="#ffffff"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-secondary my-3">
+                <strong>$ Cambiar Moneda</strong>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-9 col-sm-12 m-6 p-2">
+          <div class="row">
+            <div class="col-lg-5 col-sm-12">
+              <div class="position-relative">
+                <img
+                  src="img/cars_sales/audi_q5_2017.jpg"
+                  class="responsive-img w-100 border border-secondary-subtle p-1"
+                />
+                <p class="position-absolute top-0 start-0 btn btn-warning">
+                  Nuevo
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-7 col-sm-12">
+              <div class="row p-2">
+                <div class="col-4 mt-1"><h3>Audi Q5</h3></div>
+
+                <div class="col-7 fs-6 mt-2">
+                  <p>
+                    2017 | USD 110000 |
+                    <span class="text-warning"
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <p class="p-2">
+                SUV compacto de lujo, equipado con un motor 2.0L TFSI de 4
+                cilindros que entrega 252 hp, tracción integral quattro, diseño
+                elegante con interior premium, sistema de infoentretenimiento
+                MMI, y características de seguridad avanzadas como frenado
+                automático de emergencia.
+              </p>
+              <div class="row">
+                <div class="col-4">
+                  <button type="button" class="btn btn-success">
+                    <i class="bi bi-cart-fill"></i> Comprar
+                  </button>
+                </div>
+                <div class="col-4">
+                  <button type="button" class="btn btn-outline-secondary fs-6">
+                    <i class="bi bi-plus-square"></i> Informacion
+                  </button>
+                </div>
+                <div class="col-4">
+                  <button type="button" class="btn btn-outline-secondary fs-6">
+                    <i class="bi bi-box-arrow-up-right"></i> Compartir
+                  </button>
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-sm-3 my-4">
-              <!-- Button trigger modal -->
-              <button
-                class="d-block d-sm-none fixed btn btn-primary"
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
-                Filtrar
-              </button>
-              <form class="p-3 bg-light d-none d-sm-block">
-                <h4>Filtro</h4>
-                <hr />
-                <label for="año"><strong>Año</strong></label>
-                <select class="form-select my-2" aria-label="Selecciona el año">
-                  <option selected>Seleccionar</option>
-                  <option value="1">1970</option>
-                  <option value="2">1960</option>
-                  <option value="3">2003</option>
-                </select>
-                <label for="año"><strong>Marca</strong></label>
-                <select
-                  class="form-select my-2"
-                  aria-label="Selecciona la marca"
-                >
-                  <option selected>Seleccionar</option>
-                  <option value="1">Peugeot</option>
-                  <option value="2">Fiat</option>
-                  <option value="3">Volvo</option>
-                </select>
-                <label for="año"><strong>Modelo</strong></label>
-                <select
-                  class="form-select my-2"
-                  aria-label="Selecciona el modelo"
-                >
-                  <option selected>Seleccionar</option>
-                  <option value="1">Sedan</option>
-                  <option value="2">SUV</option>
-                  <option value="3">Deporitvo</option>
-                </select>
-                <label for="año"><strong>Estado</strong></label>
-                <select
-                  class="form-select my-2"
-                  aria-label="Selecciona el estado"
-                >
-                  <option selected>Seleccionar</option>
-                  <option value="1">1970</option>
-                  <option value="2">1973</option>
-                  <option value="3">2003</option>
-                </select>
-                <button
-                  type="button"
-                  class="btn btn-warning my-1 w-100 text-white"
-                >
-                  <strong>Filtrar</strong>
-                  <svg
-                    width="20px"
-                    height="20px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10 17C13.866 17 17 13.866 17 10C17 6.13401 13.866 3 10 3C6.13401 3 3 6.13401 3 10C3 13.866 6.13401 17 10 17Z"
-                      stroke="#ffffff"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M20.9992 21L14.9492 14.95"
-                      stroke="#ffffff"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-                <div class="d-grid gap-2">
-                  <button type="button" class="btn btn-outline-secondary my-3">
-                    <strong>$ Cambiar Moneda</strong>
+          </div>
+          <div class="row">
+            <hr class="my-4" />
+            <div class="col-lg-5 col-sm-12">
+              <img
+                src="img/cars_sales/audi_q7_2015.jpg"
+                class="responsive-img w-100 border border-secondary-subtle p-1"
+              />
+            </div>
+            <div class="col-lg-7 col-sm-12">
+              <div class="row">
+                <div class="col-4 mt-1"><h3>Audi Q7</h3></div>
+
+                <div class="col-7 fs-6 mt-2">
+                  <p>
+                    2017 | USD 98000 |
+                    <span class="text-warning"
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-half"></i
+                    ></span>
+                  </p>
+                </div>
+              </div>
+              <p class="p-2">
+                SUV mediano de lujo, cuenta con un motor 3.0L V6 TFSI de 333 hp,
+                tracción quattro, capacidad para 7 pasajeros, interior espacioso
+                con materiales de alta calidad, tecnología avanzada como
+                pantalla táctil MMI y asistente de conducción.
+              </p>
+              <div class="row">
+                <div class="col-4">
+                  <button type="button" class="btn btn-success">
+                    <i class="bi bi-cart-fill"></i> Comprar
                   </button>
                 </div>
-              </form>
-            </div>
-            <div class="col-9 m-6 p-2">
-              <h3 class="my-2">Vehiculos en ventas</h3>
-              <div class="row">
-                <div class="col-5">
-                  <img
-                    src="/img/cars_sales/audi_a6_quattro_2016.jpg"
-                    class="responsive-img w-100"
-                  />
+                <div class="col-4">
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary fs-6 d-inline"
+                  >
+                    <i class="bi bi-plus-square"></i> Informacion
+                  </button>
                 </div>
-                <div class="col-7">
+                <div class="col-4">
+                  <button type="button" class="btn btn-outline-secondary fs-6">
+                    <i class="bi bi-box-arrow-up-right"></i> Compartir
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <hr class="my-4" />
+            <div class="col-lg-5 col-sm-12">
+              <img
+                src="/img/cars_sales/audi_a6_quattro_2016.jpg"
+                class="responsive-img w-100 border border-secondary-subtle p-1"
+              />
+            </div>
+            <div class="col-lg-7 col-sm-12">
+              <div class="row">
+                <div class="col-4 mt-1"><h3>Audi A6 Quattro</h3></div>
+
+                <div class="col-7 fs-6 mt-1">
                   <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Suscipit dignissimos officia corrupti sunt eos facilis omnis
-                    vel illum inventore voluptate.
+                    2016 | USD 98000 |
+                    <span class="text-warning"
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i><i class="bi bi-star"></i
+                      ><i class="bi bi-star"></i
+                    ></span>
                   </p>
+                </div>
+              </div>
+              <p class="p-2">
+                Sedán de lujo, motor 3.0L V6 sobrealimentado de 333 hp, tracción
+                integral quattro, diseño aerodinámico, interior refinado con
+                sistema de navegación MMI, suspensión adaptativa y
+                características de seguridad como control de crucero adaptativo.
+              </p>
+              <div class="row">
+                <div class="col-4">
+                  <button type="button" class="btn btn-success">
+                    <i class="bi bi-cart-fill"></i> Comprar
+                  </button>
+                </div>
+                <div class="col-4">
+                  <button type="button" class="btn btn-outline-secondary fs-6">
+                    <i class="bi bi-plus-square"></i> Informacion
+                  </button>
+                </div>
+                <div class="col-4">
+                  <button type="button" class="btn btn-outline-secondary fs-6">
+                    <i class="bi bi-box-arrow-up-right"></i> Compartir
+                  </button>
                 </div>
               </div>
             </div>
@@ -391,7 +538,7 @@
 
           <div class="col-md-3">
             <ul>
-              <li><a href="ventas.html">Venta 0km</a></li>
+              <li><a href="ventas0km.html">Venta 0km</a></li>
               <li><a href="ventas.html">Venta Usados</a></li>
             </ul>
           </div>
